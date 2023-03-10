@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 public interface Attack {
 
-    String run (ArrayList<String> tokens, String targetID, int targetDiscrim);
+    String run(String[] args);
 
     default Set<Setting> getSettings() {
         Set<Setting> ret = new HashSet<>();

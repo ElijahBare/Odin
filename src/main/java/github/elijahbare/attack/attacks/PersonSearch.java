@@ -18,7 +18,7 @@ public class PersonSearch implements Attack {
     public final Setting<Integer> depth = new Setting<Integer>("Depth", 5,1,10);
 
     @Override
-    public String run(ArrayList<String> tokens, String targetID, int targetDiscrim) {
+    public String run(String[] args) {
         return "Not implemented";
     }
 
