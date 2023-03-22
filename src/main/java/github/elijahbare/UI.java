@@ -69,7 +69,10 @@ public class UI extends JFrame {
 
 
                 runButton.addActionListener(e -> {
-                    System.out.println(attack.run(null));
+                    Thread thread = new Thread(() -> {
+                        System.out.println(attack.run(null));
+                    });
+                    thread.start();
                 });
 
                 attackListPanel.add(attackPanel);
