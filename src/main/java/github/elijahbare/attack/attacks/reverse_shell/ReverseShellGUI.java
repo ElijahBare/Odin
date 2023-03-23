@@ -21,7 +21,6 @@ public class ReverseShellGUI {
     private final JFrame frame;
     private final JTextArea textArea;
     private final JTextField commandField;
-    private final JButton submitButton;
 
     /**
      * Gui for the reverse shell module
@@ -46,7 +45,7 @@ public class ReverseShellGUI {
         commandField = new JTextField();
         topPanel.add(commandField, BorderLayout.CENTER);
 
-        submitButton = new JButton("Submit");
+        JButton submitButton = new JButton("Submit");
 
         ActionListener submitListener = new ActionListener() {
             @Override

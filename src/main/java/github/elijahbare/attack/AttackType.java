@@ -5,10 +5,5 @@ package github.elijahbare.attack;
  */
 
 public enum AttackType {
-
     LOCAL_NETWORK,
-    PHISHING,
-    OSINT
-
-
 }
