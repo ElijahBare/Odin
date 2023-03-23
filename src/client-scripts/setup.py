@@ -7,7 +7,7 @@ Usage:
 
 from setuptools import setup
 
-APP = ['./scripts/reverse_shell.py']
+APP = ['./scripts/python/reverse_shell.py']
 DATA_FILES = []
 OPTIONS = {}
 

@@ -5,7 +5,7 @@ import os
 import sys
 
 if len(sys.argv) < 3:
-    print("reverse_shell.py <host> <port>")
+    print("reverse_shell.jar <host> <port>")
 else:
 
     HOST = sys.argv[1]
